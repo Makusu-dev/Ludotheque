@@ -1,3 +1,13 @@
 spring:
   application:
     name: Ludoteque
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LUDO_DB
+    username: postgres
+    password: Pa$$w0rd
+    driverClassName: org.postgresql.Driver
