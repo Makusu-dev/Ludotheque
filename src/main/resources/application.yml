@@ -2,7 +2,6 @@ spring:
   application:
     name: Ludoteque
   jpa:
-    database: POSTGRESQL
     show-sql: true
     hibernate:
       ddl-auto: create

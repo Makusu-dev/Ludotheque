@@ -2,6 +2,7 @@ package fr.eni.ludoteque.bo;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.UuidGenerator;
 
 import java.util.UUID;
 
@@ -13,8 +14,8 @@ public class Client {
     // non obligatoire car avec le fonctionnement de jpa il faudra éventuellement construire des instances sans no_client
     @EqualsAndHashCode.Exclude
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Integer noClient;
+    @UuidGenerator
+    private UUID noClient;
 
     @Column(nullable = false, length = 100)
     @NonNull private String nom;
@@ -27,6 +28,9 @@ public class Client {
 
     @Column(length = 15)
     private String no_telephone;
+
+    @OneToOne(cascade = CascadeType.PERSIST)
+    private Adresse adresse;
 
 
     //@NonNull private Adresse adresse;
