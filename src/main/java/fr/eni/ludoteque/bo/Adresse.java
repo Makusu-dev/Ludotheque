@@ -20,7 +20,7 @@ public class Adresse {
 
     @NonNull
     @Column(nullable = false,length = 6)
-    private String code_postal;
+    private String codePostal;
 
     @NonNull
     @Column(nullable = false,length = 50)

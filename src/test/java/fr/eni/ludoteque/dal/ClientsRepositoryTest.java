@@ -27,7 +27,7 @@ public class ClientsRepositoryTest {
         // AAA Arrange, Act, Assert
         //Arrange
         Client client = new Client("bob","dupont","bob.email@mail.com");
-        client.setNo_telephone("0101010110");
+        client.setNoTelephone("0101010110");
 
         //Act
         Client newClient = clientsRepository.save(client);

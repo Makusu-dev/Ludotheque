@@ -17,9 +17,8 @@ public class Exemplaire {
     @EqualsAndHashCode.Exclude
     private UUID noExemplaire;
 
-
     @Column(nullable = false,length = 20, unique = true)
-    private Integer codeBarre;
+    private String codeBarre;
 
     @NonNull
     @Column(nullable = false)

@@ -19,16 +19,19 @@ public class Jeu {
     private UUID noJeu;
 
     @NonNull
+    @Column(nullable=false)
     private String titre;
 
     @NonNull
+    @Column(nullable=false)
     private String reference;
 
     @NonNull
-    private Float tarif_jour;
+    @Column(nullable=false)
+    private Float tarifJour;
 
     private String description;
-    private int age_min;
+    private int ageMin;
     private int duree;
 
     @ManyToMany(cascade= {CascadeType.PERSIST, CascadeType.MERGE},
@@ -42,6 +45,7 @@ public class Jeu {
     public void addGenre(Genre genre){
         genres.add(genre);
     }
+
 
 
 
